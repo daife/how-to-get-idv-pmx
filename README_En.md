@@ -87,11 +87,13 @@ Animating your favorite game characters is fun, but NetEase's unique npk encrypt
     (You may notice there is an extra spine bone compared to standard MMD models. Not sure why NetEase does this!)
 
 13. **Verify the result**
+    
     Try moving bones in pose mode to see if the character moves correctly. At this point, you may notice the downside of auto skinning: some parts unrelated to the torso are also weighted (e.g., Lisa's wings stretch when the upper arm moves). If you can repaint weights yourself, feel free to explore further. The author gave up here after finding a faster way.
 
 14. **Eureka moment**
+    
     After the above, you should have a good idea of how pmx works. Open the NeoXtractor directory and modify bone_name.py. NeoXtractor actually provides auto bone renaming, but there are some issues (maybe because it's for the global version and I use CN). The new renaming rules (tested on Gardener Tulip skin):
-        ```
+    ```
     biped,センター
     biped_footsteps,
     biped_pelvis,下半身
@@ -138,12 +140,15 @@ Animating your favorite game characters is fun, but NetEase's unique npk encrypt
     So, another way: use RenderDoc to capture a frame in Identity V with your character visible, analyze nodes, and export relevant files (preferably as png). Downside: rare models are hard to get.
 
 16. **Texture processing**
+    
     Always process textures first! Adjust the alpha channel (remove it if you don't need transparency). The author initially tried to fix this in Blender's shader editor, but this caused export issues (textures became transparent in pmx). The reason may be mmd_tools can't save Blender shader settings.
 
 17. **Texture binding**
-    (You should have separated the model by material in step 9.) Use UV maps to help bind all parts to the correct textures.
+    
+    (You should have separated the model by material in step 9.Right?) Use UV maps to help bind all parts to the correct textures.
 
 18. **You got it!**
+    
     Now you can import vmd or vpd motions, or export the pmx model.
 
 Unfinished TODO:
