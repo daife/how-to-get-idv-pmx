@@ -11,8 +11,6 @@ how-to-get-idv-pmx/
 
 ```
 
-Please put example images for each step in the `images/` folder and reference them in the documentation.
-
 ---
 
 ## English Guide(Translate from Chinese documents by ai,there may be inaccuracies)
